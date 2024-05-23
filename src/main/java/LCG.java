@@ -37,7 +37,7 @@ public class LCG {
             testSet.add(this.numberStore.get(i) & 0x000000FF);
         }
 
-        System.out.println("Numbers in HashSet: " + testSet.size());
+        System.out.println("Integer in HashSet: " + testSet.size());
     }
 
 }
