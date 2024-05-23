@@ -93,7 +93,7 @@ public class SecureFileAlt {
         String input_file = args[0];
         String key_file = args[1];
         String output_file = args[2];
-        String operation = args[3]; // "encrypt" or "decrypt"
+        String operation = args[3]; // "encrypt" or  "decrypt"
 
         SecureFileAlt sf = new SecureFileAlt(key_file, operation);
         sf.processFile(input_file, output_file);
