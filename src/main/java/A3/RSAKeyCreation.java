@@ -6,7 +6,11 @@ import java.io.*;
 
 
 public class RSAKeyCreation {
-    public static void createKey(String owner) {
+    public static void createKey(String[] args) {
+        if( args.length != 1){
+            System.out.println(String.format("%d arguments given. Only input 1 owner name", args.length));
+            return;
+        }
         try {
             KeyPairGenerator keyGen = KeyPairGenerator.getInstance("RSA");
             keyGen.initialize(4096);
@@ -83,7 +87,7 @@ public class RSAKeyCreation {
     }
 
     public static void main(String[] args) {
-        createKey("Maurice");
+        createKey(args);
     }
 
 }
