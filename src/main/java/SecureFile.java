@@ -52,9 +52,9 @@ public class SecureFile {
 
         while((len = in.read(buffer)) > 0) {
             byte[] block = buffer.clone();
-            if (len < 8) {
-                block = Arrays.copyOf(block, 8);
-            }
+
+            block = Arrays.copyOf(block, 8);
+
             byte[] encrypted_feedback = des.encryptBytes(feedback);
 
             if (operation.equals("encrypt")) {

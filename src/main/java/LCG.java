@@ -27,8 +27,7 @@ public class LCG {
     }
     public int nextInt(){
         this.x = (a * this.x + b) % m;
-        long longX = this.x;
-        return (int) longX;
+        return (int) x;
     }
 
     public void testQuality(){
