@@ -1,20 +1,20 @@
-// Copyright (C) 1998-2001 Logi Ragnarsson
+package DES;// Copyright (C) 1998-2001 Logi Ragnarsson
 
 import java.util.Random;
 
 /**
- * This is the class for Data Encryption Standard (DES) keys. See FIPS PUB 46-1
+ * This is the class for Data Encryption Standard (DES.DES) keys. See FIPS PUB 46-1
  * or DEA defined in ANSI X3.92-1981 for a complete specification.
  *
  * <p>
- * DES is the most widely used block cipher, although it is nowadays normally
- * used repeatedly for each piece of plain-text and is called triple-DES. This
- * is because the 56-bit key-size of the normal DES is too small to offer
+ * DES.DES is the most widely used block cipher, although it is nowadays normally
+ * used repeatedly for each piece of plain-text and is called triple-DES.DES. This
+ * is because the 56-bit key-size of the normal DES.DES is too small to offer
  * complete security.
  * <p>
- * The CDS for a DES key is <code>DES(key)</code> with <code>key</code>
+ * The CDS for a DES.DES key is <code>DES.DES(key)</code> with <code>key</code>
  * a string of 16 hexadecimal digits to create a specific key
- * or <code>DES(?)</code> for a random DES object.
+ * or <code>DES.DES(?)</code> for a random DES.DES object.
  * <p>
  * This implementation is done from the description given in Schneier's
  * <i>Applied Cryptography</i>.
@@ -25,14 +25,14 @@ import java.util.Random;
  */
 public class DES
 {
-    /** The actual DES key. */
+    /** The actual DES.DES key. */
     private long key;
 
     /** The 16 sub-keys used for each iteration. */
     private long[] subKeys;
 
 
-    /** Create a new random DES key. */
+    /** Create a new random DES.DES key. */
     public DES()
     {
         key = (new Random()).nextLong();
@@ -40,7 +40,7 @@ public class DES
     }
 
 
-    /** Create a new DES key with the key bits from <code>key[0..7]</code>. */
+    /** Create a new DES.DES key with the key bits from <code>key[0..7]</code>. */
     public DES(byte[] key)
     {
         this.key = makeLong(key,0,8);
@@ -48,7 +48,7 @@ public class DES
     }
 
 
-    /** Create a new DES key with the key bits from <code>key</code>. */
+    /** Create a new DES.DES key with the key bits from <code>key</code>. */
     public DES(long key)
     {
         this.key = key;
@@ -56,28 +56,28 @@ public class DES
     }
 
 
-    /** The block-size for the DES cipher is 8 bytes. */
+    /** The block-size for the DES.DES cipher is 8 bytes. */
     public int plainBlockSize()
     {
         return 8;
     }
 
 
-    /** The block-size for the DES cipher is 8 bytes. */
+    /** The block-size for the DES.DES cipher is 8 bytes. */
     public int cipherBlockSize()
     {
         return 8;
     }
 
 
-    /** The key-size for the DES cipher is 56 bits. */
+    /** The key-size for the DES.DES cipher is 56 bits. */
     public int getSize()
     {
         return 56;
     }
 
 
-    /** The name of the algorithm is "DES". */
+    /** The name of the algorithm is "DES.DES". */
     public String getAlgorithm()
     {
         return "DES";
@@ -113,7 +113,7 @@ public class DES
      */
     public String toString()
     {
-        return "DES("+hexString(key)+")";
+        return "DES.DES("+hexString(key)+")";
     }
 
 

@@ -1,4 +1,4 @@
-import java.io.*;
+package DES;
 
 public class TripleDES {
     private DES des1;
